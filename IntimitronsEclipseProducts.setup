@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:ProductCatalog
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    name="ca.intimitrons.eclipse"
+    label="Intimitrons Eclipse Products">
+  <setupTask
+      xsi:type="setup:InstallationTask"
+      id="installation"/>
+  <setupTask
+      xsi:type="setup.p2:P2Task">
+    <requirement
+        name="org.eclipse.oomph.setup.feature.group"/>
+    <repository
+        url="${oomph.update.url}"/>
+  </setupTask>
+  <product name="cdt.frc"
+      label="Intimitrons Eclipse CDT for FRC">
+    <version
+        name="oxygen"
+        label="Eclipse Oxygen"
+        requiredJavaVersion="1.8">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+        <detail
+            key="folderName">
+          <value>eclipse-oxygen-cdt</value>
+        </detail>
+      </annotation>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="Eclipse IDE for C/C++ Developers (Oxygen)"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="epp.package.cpp"
+            versionRange="[4.7.0,4.8.0)"/>
+        <requirement
+            name="org.eclipse.platform.feature.group"
+            versionRange="[4.7.0,4.8.0)"/>
+        <requirement
+            name="org.eclipse.rcp.feature.group"
+            versionRange="[4.7.0,4.8.0)"/>
+        <requirement
+            name="org.eclipse.cdt.autotools.feature.group"/>
+        <requirement
+            name="org.eclipse.cdt.build.crossgcc.feature.group"/>
+        <requirement
+            name="org.eclipse.cdt.debug.standalone.feature.group"/>
+        <requirement
+            name="org.eclipse.cdt.debug.ui.memory.feature.group"/>
+        <requirement
+            name="org.eclipse.cdt.feature.group"/>
+        <requirement
+            name="org.eclipse.cdt.launch.remote.feature.group"/>
+        <requirement
+            name="org.eclipse.cdt.mylyn.feature.group"/>
+        <requirement
+            name="org.eclipse.egit.feature.group"/>
+        <requirement
+            name="org.eclipse.linuxtools.cdt.libhover.devhelp.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.linuxtools.cdt.libhover.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.linuxtools.changelog.c.feature.group"/>
+        <requirement
+            name="org.eclipse.linuxtools.gcov.feature.group"/>
+        <requirement
+            name="org.eclipse.linuxtools.gprof.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.linuxtools.rpm.feature.group"/>
+        <requirement
+            name="org.eclipse.linuxtools.valgrind.feature.group"/>
+        <requirement
+            name="org.eclipse.mylyn.bugzilla_feature.feature.group"/>
+        <requirement
+            name="org.eclipse.mylyn.context_feature.feature.group"/>
+        <requirement
+            name="org.eclipse.mylyn.ide_feature.feature.group"/>
+        <requirement
+            name="org.eclipse.mylyn.team_feature.feature.group"/>
+        <requirement
+            name="org.eclipse.mylyn.wikitext_feature.feature.group"/>
+        <requirement
+            name="org.eclipse.mylyn_feature.feature.group"/>
+        <requirement
+            name="org.eclipse.rse.feature.group"/>
+        <requirement
+            name="org.eclipse.tm.terminal.connector.cdtserial.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.tm.terminal.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.tracecompass.gdbtrace.feature.group"/>
+        <requirement
+            name="org.eclipse.tracecompass.lttng2.control.feature.group"/>
+        <requirement
+            name="org.eclipse.tracecompass.lttng2.kernel.feature.group"/>
+        <requirement
+            name="org.eclipse.tracecompass.lttng2.ust.feature.group"/>
+        <repository
+            url="http://download.eclipse.org/technology/epp/packages/oxygen"/>
+        <repository
+            url="http://download.eclipse.org/releases/oxygen/"/>
+      </setupTask>
+      <setupTask
+          xsi:type="setup.p2:P2Task"
+          label="FRC Plugins"
+          licenseConfirmationDisabled="true">
+        <requirement
+            name="edu.wpi.first.wpilib.plugins.cpp.feature.feature.group"
+            versionRange="2018.0.0"/>
+        <repository
+            url="http://first.wpi.edu/FRC/roborio/release/eclipse/"/>
+      </setupTask>
+      <description>Eclipse Oxygen based FRC C++ IDE</description>
+    </version>
+    <description>Eclipse CDT which includes FRC plugins and other customized default settings</description>
+  </product>
+  <description>Eclipse product models used by the Intimitrons</description>
+</setup:ProductCatalog>
