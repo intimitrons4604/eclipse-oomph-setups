@@ -1,5 +1,7 @@
 # Eclipse Oomph Setups
 
+**This repository is archived.** FRC has replaced Eclipse with Visual Studio Code.
+
 This repository contains an index and product catalogs for use by Eclipse Oomph (the Eclipse installer).
 
 Currently the catalog only conatains a single product based on the Eclipse Oxygen IDE for C/C++ Developers. The product also adds the FRC plugins to Eclipse and sets a few preferences. The product defined here is used by the development tool install script to install Eclipse.
